@@ -26,27 +26,26 @@
         }
       }
     }
-    }
+    
     stage('package'){
       steps{
         script{
-          sh ' echo "packaging app" '
+          sh 'echo "packaging app"'
         }
       }
     }
-    stage('deploy'){
+    stage('Deploy'){
       steps{
         script{
           sh 'echo " deploying to dev " '
         }
       }
     }
-    stage("clean up"){
+    stage('clean up'){
       steps{
       cleanWs()
     }
   }
      
-     
-     
+  }
 }
